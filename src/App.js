@@ -1,26 +1,23 @@
-import React from 'react';
+import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import { graphql } from 'react-apollo';
+import { useSubscription } from '@apollo/react-hooks';
+import gql from 'graphql-tag';
+const COMMENTS_SUBSCRIPTION = gql`
+  subscription {
+      betAdded {
+        id,
+        time
+      }
+}
+`;
+function DontReadTheComments({ }) {
+    const { data: {betAdded} = {}, loading } = useSubscription(
+        COMMENTS_SUBSCRIPTION
+    );
+    console.log(betAdded)
+    return <h4>New comment: {!loading && betAdded.time}</h4>;
 }
 
-export default App;
+export default DontReadTheComments;
