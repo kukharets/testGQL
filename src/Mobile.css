@@ -1,0 +1,33 @@
+@media (min-width: 1px) and (max-width: 479px) {
+  .content {
+    display: grid;
+    grid-template-rows: 545px 545px 545px;
+    grid-template-columns: unset;
+    grid-row-gap: 50px;
+    padding: 100px 20px;
+  }
+  .slider {
+    touch-action: none;
+  }
+  .bet-amount-container {
+    grid-template-columns: 165fr 58fr 58fr
+  }
+  .bet-amount-btc-input {
+    width: 60%;
+  }
+  .bets-row {
+    grid-template-columns: 10fr 7fr;
+  }
+  .bets-row>span:nth-child(2) {
+    display: none;
+  }
+  .bets-row>span:nth-child(3) {
+    display: none;
+  }
+  .datalist-container {
+    padding-top: 10%;
+  }
+  .bets-list {
+    height: 80%;
+  }
+}
