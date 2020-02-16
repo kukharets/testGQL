@@ -33,6 +33,7 @@ function Slider() {
     if (sliderRef.current.clientHeight && svgRef.current.clientHeight) {
       setMaxBottom(sliderRef.current.clientHeight - svgRef.current.clientHeight/2);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [counterBottom]);
 
   const handleMouseDown = (e) => {

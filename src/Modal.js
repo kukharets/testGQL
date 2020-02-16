@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Confirm from './assests/Confirm.svg';
 
 function Modal({handleModalOpenState}) {

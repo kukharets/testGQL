@@ -86,6 +86,7 @@ function List() {
             }
             setItems(currentItems);
         }
+      // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [betAdded]);
 
     return (
