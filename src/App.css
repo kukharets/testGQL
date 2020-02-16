@@ -46,7 +46,9 @@
 .slider-container {
   padding-top: 8%;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .slider-wrapper {
@@ -136,4 +138,75 @@
   z-index: 999;
   position: absolute;
   left: 0;
+}
+
+.bet-amount-container {
+  display: grid;
+  grid-template-columns: 265fr 58fr 58fr;
+  grid-auto-rows: 100%;
+  margin-bottom: 10%;
+  width: 80%;
+  height: 57px;
+}
+
+.bet-amount-container>div:first-child{
+  background-color: #0A1A33;
+  border-bottom-left-radius: 8px;
+  border-top-left-radius: 8px;
+  padding: 7px 10.7px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  color: #80A2CC;
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+}
+.bet-amount-container>div:nth-child(2){
+  background-color: #275E9A;
+  border-right: 1px solid #525252;
+  display: flex;
+  font-family: Roboto, sans-serif;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+  color: white;
+}
+.bet-amount-container>div:nth-child(3){
+  background-color: #275E9A;
+  border-bottom-right-radius: 8px;
+  border-top-right-radius: 8px;
+  font-family: Roboto, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+  color: white;
+}
+
+.bet-amount-value {
+  font-family: Roboto, sans-serif;
+  color: white;
+  font-weight: 600;
+  display: flex;
+}
+
+.bet-amount-btc-icon {
+  min-width: 15.7px;
+  min-height: 15.7px;
+  border-radius: 100%;
+  background-color: #FEC41C;
+  margin-right: 10px;
+  color: black;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -moz-transform: rotate(15deg);
+  -ms-transform: rotate(15deg);
+  -webkit-transform: rotate(15deg);
+  -o-transform: rotate(15deg);
+  transform: rotate(15deg);
 }

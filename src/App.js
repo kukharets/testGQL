@@ -2,6 +2,7 @@ import React, { useRef, useState, useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Counter from './assests/Counter.svg';
+import BetAmount from "./BetAmount";
 
 function App() {
     const [counterBottom, setCounterBottom] = useState(null);
@@ -84,6 +85,7 @@ function App() {
                 </div>
               </div>
           </div>
+          <BetAmount/>
         </div>
         <div className='datalist-container'>&nbsp;</div>
         <div className='shellfish-container'>&nbsp;</div>
