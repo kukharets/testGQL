@@ -62,21 +62,32 @@ function Slider() {
       setStartMouseY(findEventY(e));
     }
   };
-    return (
-      <div onMouseUp={handleMouseUp} onTouchEnd={handleMouseUp} onTouchMove={handleMouseMove} onMouseMove={handleMouseMove} className='slider-wrapper'>
-        <div className='slider-values'>
-          <span className='slider-value'>100</span>
-          <span className='slider-value'>0</span>
-        </div>
-        <div ref={sliderRef} className='slider'>
-          <div style={{height: counterBottom - minBottom}} className='slider-bottom'>
-            <div ref={svgRef} onTouchStart={handleMouseDown} onMouseDown={handleMouseDown} style={{bottom: counterBottom}} className='image-wrapper'>
-              <span className='counter-value'>{((counterBottom - minBottom) / ((maxBottom - minBottom) / 100)).toFixed(2)}</span>
-            </div>
+  return (
+    <div onMouseUp={handleMouseUp}
+         onTouchEnd={handleMouseUp}
+         onTouchMove={handleMouseMove}
+         onMouseMove={handleMouseMove}
+         className='slider-wrapper'>
+      <div className='slider-values'>
+        <span className='slider-value'>100</span>
+        <span className='slider-value'>0</span>
+      </div>
+      <div ref={sliderRef} className='slider'>
+        <div style={{height: counterBottom - minBottom}} className='slider-bottom'>
+          <div ref={svgRef}
+               onTouchStart={handleMouseDown}
+               onMouseDown={handleMouseDown}
+               onMouseLeave={() => setCounterPushed(false)}
+               style={{bottom: counterBottom}}
+               className='image-wrapper'>
+              <span className='counter-value'>
+                {((counterBottom - minBottom) / ((maxBottom - minBottom) / 100)).toFixed(2)}
+              </span>
           </div>
         </div>
       </div>
-    )
+    </div>
+  )
 }
 
 export default Slider;
