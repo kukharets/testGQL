@@ -16,7 +16,7 @@ const COMMENTS_SUBSCRIPTION = gql`
 
 const parseDate = (unix_timestamp) => {
     let date = new Date(unix_timestamp);
-    return `${date.getDay()}.${date.getMonth()}.${date.getFullYear()} ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`
+    return `${date.getDay()}.${date.getMonth()}.${date.getFullYear()} ${date.getHours()}:${date.getMinutes()}:${date.getSeconds() > 9 ? date.getSeconds() : '0' +  date.getSeconds()}`
 };
 
 function RenderBetItem ({time, bet, multiplier, profit, index, isNew})  {
@@ -45,7 +45,7 @@ function RenderBetItem ({time, bet, multiplier, profit, index, isNew})  {
                     <span className='bet-amount-btc-icon'>₿</span>
                     {bet}
             </span>
-            <span>x{multiplier}</span>
+            <span className='bet-amount-value'>x{multiplier}</span>
             <span className='bet-amount-value green'>
                     <span className='bet-amount-btc-icon'>₿</span>
                     <span style={{color: profitColor}}>{profit}</span>
