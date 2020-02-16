@@ -195,9 +195,31 @@
   display: flex;
 }
 
+.bet-amount-btc-input {
+  background-color: #0A1A33;
+  margin: 0;
+  border: none;
+  color: white;
+}
+
+.bet-amount-btc-input:hover {
+  background-color: #0f3459;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance:textfield;
+}
+
 .bet-amount-btc-icon {
-  min-width: 15.7px;
-  min-height: 15.7px;
+  width: 15.7px;
+  height: 15.7px;
   border-radius: 100%;
   background-color: #FEC41C;
   margin-right: 10px;

@@ -62,9 +62,9 @@ function App() {
       <header className="header">
           <span className="header-menu-icon"/>
       </header>
-      <div  onMouseUp={handleMouseUp} className="content">
-        <div  onMouseMove={handleMouseMove} className='slider-container'>
-          <div className='slider-wrapper'>
+      <div  className="content">
+        <div  className='slider-container'>
+          <div   onMouseUp={handleMouseUp} onMouseMove={handleMouseMove} className='slider-wrapper'>
               <div className='slider-values'>
                 <span className='slider-value'>100</span>
                 <span className='slider-value'>0</span>
@@ -82,7 +82,9 @@ function App() {
         <div className='datalist-container'>
           <List/>
         </div>
-        <div className='shellfish-container'>&nbsp;</div>
+        <div className='shellfish-container'>
+
+        </div>
       </div>
     </div>
   );
