@@ -48,7 +48,7 @@ function RenderBetItem ({time, bet, multiplier, profit, index, isNew})  {
             <span className='bet-amount-value'>x{multiplier}</span>
             <span className='bet-amount-value green'>
                     <span className='bet-amount-btc-icon'>₿</span>
-                    <span style={{color: profitColor}}>{profit}</span>
+                    <span style={{color: profitColor}}>{profit > 0 ? `+${profit}` : profit}</span>
             </span>
         </div>
     )
