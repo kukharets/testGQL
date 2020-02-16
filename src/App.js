@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import Counter from './assests/Counter.svg';
 import BetAmount from "./BetAmount";
+import List from "./List";
 
 function App() {
     const [counterBottom, setCounterBottom] = useState(null);
@@ -15,7 +16,6 @@ function App() {
     const sliderRef = useRef();
 
     useEffect(() => {
-        console.log(typeof counterBottom)
         if (svgRef.current.clientHeight && typeof counterBottom !== 'number') {
             setCounterBottom(- svgRef.current.clientHeight / 2);
         }
@@ -29,16 +29,12 @@ function App() {
     }, [counterBottom]);
 
     const handleMouseDown = (e) => {
-        console.error('handleMouseDown');
         setCounterPushed(true);
         setStartMouseY(e.clientY);
     };
     const handleMouseUp = (e) => {
-        console.error('handleMouseUp');
         setCounterPushed(false);
-        console.warn('MOVE TO', counterBottom);
         let newBottom = counterBottom + (startMouseY - e.clientY);
-        console.error("NEW BOT", newBottom)
         if (newBottom > maxBottom) {
             newBottom = maxBottom;
         } else if (newBottom < minBottom) {
@@ -47,12 +43,9 @@ function App() {
         setCounterBottom(newBottom);
         setStartMouseY(e.clientY);
     };
-    console.warn('MAX MIN', maxBottom, minBottom);
     const handleMouseMove = (e) => {
         if (counterPushed) {
-            console.warn('MOVE TO', counterBottom);
             let newBottom = counterBottom + (startMouseY - e.clientY);
-            console.error("NEW BOT", newBottom)
             if (newBottom > maxBottom) {
                 newBottom = maxBottom;
             } else if (newBottom < minBottom) {
@@ -63,7 +56,6 @@ function App() {
         }
     };
 
-    console.error(counterBottom )
 
     return (
     <div className="app">
@@ -87,7 +79,9 @@ function App() {
           </div>
           <BetAmount/>
         </div>
-        <div className='datalist-container'>&nbsp;</div>
+        <div className='datalist-container'>
+          <List/>
+        </div>
         <div className='shellfish-container'>&nbsp;</div>
       </div>
     </div>

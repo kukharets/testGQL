@@ -1,3 +1,5 @@
+
+
 .app {
   text-align: center;
   background-color: #292929;
@@ -209,4 +211,67 @@
   -webkit-transform: rotate(15deg);
   -o-transform: rotate(15deg);
   transform: rotate(15deg);
+}
+
+.datalist-container {
+  padding-top: 20%;
+  display: flex;
+  justify-content: center;
+}
+.bets-list {
+  width: 90%;
+  height: 70%;
+}
+
+.bets-header {
+  background-color: #275789;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  color: #7D9CC6;
+  font-family: Roboto, sans-serif;
+  font-weight: 300;
+}
+
+.bets-row {
+  height: 34px;
+  align-items: center;
+  padding-left: 50px;
+  padding-right: 20px;
+  display: grid;
+  grid-template-columns: 6fr 4fr 4fr 4fr;
+  grid-column-gap: 30px;
+}
+
+.bets-row>span {
+  text-align: start;
+}
+
+.bets-items {
+  padding-top: 20px;
+  padding-bottom: 40px;
+  background-color: #133252;
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+  grid-row-gap: 10px;
+  color: #FFFFFF;
+  opacity: 100%;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  height: 90%;
+}
+
+.bets-data-row {
+  opacity: 0;
+  visibility: hidden;
+  background: olive;
+  margin-bottom: 10px;
+}
+
+.bets-data-row.visible{
+  background: unset;
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 3s;
+  -webkit-transition: background 1s;
 }
