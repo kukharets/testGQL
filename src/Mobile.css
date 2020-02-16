@@ -30,4 +30,20 @@
   .bets-list {
     height: 80%;
   }
+  .modal {
+    position: fixed;
+    touch-action: none;
+    align-items: start;
+    z-index: 3000;
+  }
+  .modal-inner {
+    z-index: 2000;
+    width: 100%;
+    height: 30%;
+    color: white;
+    opacity: 99%;
+  }
+  .modal-header>img{
+    display: none;
+  }
 }

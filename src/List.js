@@ -57,7 +57,7 @@ function RenderBetItem ({time, bet, multiplier, profit, index, isNew})  {
 function List() {
     const [items, setItems] = useState([]);
 
-    const { data: {betAdded} = {}, loading } = useSubscription(
+    const { data: {betAdded} = {} } = useSubscription(
         COMMENTS_SUBSCRIPTION
     );
 
