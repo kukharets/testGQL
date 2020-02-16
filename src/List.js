@@ -1,7 +1,5 @@
-import React, { useRef, useState, useEffect } from 'react';
-import logo from './logo.svg';
+import React, { useState, useEffect } from 'react';
 import './App.css';
-import { graphql } from 'react-apollo';
 import { useSubscription } from '@apollo/react-hooks';
 import gql from 'graphql-tag';
 const COMMENTS_SUBSCRIPTION = gql`

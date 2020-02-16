@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 function BetAmount() {
     const [counterBottom, setCounterBottom] = useState(0.04885313);

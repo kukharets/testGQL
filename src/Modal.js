@@ -1,9 +1,7 @@
-import React, { useRef, useState, useEffect } from 'react';
-import ClawsUpper from './assests/ClawsUpper.svg';
+import React, { useState } from 'react';
 import Confirm from './assests/Confirm.svg';
 
 function Modal({handleModalOpenState}) {
-    const [counterBottom, setCounterBottom] = useState(0.04885313);
     return (
         <div className='modal'>
             <div className='modal-inner'>
