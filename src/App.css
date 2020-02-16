@@ -297,3 +297,90 @@ input[type=number] {
   transition-delay: 3s;
   -webkit-transition: background 1s;
 }
+
+.shellfish-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.claws-wrapper {
+  cursor: pointer;
+}
+.claws-upper-wrapper {
+  height: 200px;
+  margin-bottom: -200px;
+}
+
+.claws-upper {
+  margin-top: 50px;
+  z-index: 999;
+}
+.claws-upper.hovered {
+  margin-top: -10px;
+  -webkit-transition: margin-top 1s;
+}
+
+.modal {
+  position: absolute;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.73);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal-inner {
+  z-index: 2000;
+  width: 50%;
+  height: 30%;
+  color: white;
+  opacity: 99%;
+}
+.modal-header{
+  position: relative;
+  background: #113352;
+  padding: 16px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 35px;
+  font-weight: 600;
+  font-family: Roboto, sans-serif;
+}
+
+.modal-content {
+  background: #2D4560;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+}
+
+.close {
+  cursor: pointer;
+  position: absolute;
+  right: 18px;
+  top: 20px;
+  width: 32px;
+  height: 32px;
+  opacity: 0.6;
+  align-self: flex-end;
+}
+.close:hover {
+  opacity: 1;
+}
+.close:before, .close:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 33px;
+  width: 3px;
+  background-color: white;
+}
+.close:before {
+  transform: rotate(45deg);
+}
+.close:after {
+  transform: rotate(-45deg);
+}

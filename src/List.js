@@ -17,20 +17,11 @@ const COMMENTS_SUBSCRIPTION = gql`
 `;
 
 const parseDate = (unix_timestamp) => {
-    var date = new Date(unix_timestamp * 1000);
-// Hours part from the timestamp
-    var hours = date.getHours();
-// Minutes part from the timestamp
-    var minutes = "0" + date.getMinutes();
-// Seconds part from the timestamp
-    var seconds = "0" + date.getSeconds();
-
-// Will display time in 10:30:23 format
-   return hours + ':' + minutes.substr(-2) + ':' + seconds.substr(-2);
+    let date = new Date(unix_timestamp);
+    return `${date.getDay()}.${date.getMonth()}.${date.getFullYear()} ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`
 };
 
 function RenderBetItem ({time, bet, multiplier, profit, index, isNew})  {
-    console.log('isNew', isNew, time)
     const [marginTop, setMarginTop] = useState(0);
     const [visible, setVisible] = useState(false);
     useEffect(() => {
@@ -38,7 +29,6 @@ function RenderBetItem ({time, bet, multiplier, profit, index, isNew})  {
         const scroller = setInterval(() => {
             counter++;
             if (counter <= 24) {
-                console.warn('zzz')
                 setMarginTop(4 + counter)
             } else {
                 clearInterval(scroller)
@@ -49,9 +39,9 @@ function RenderBetItem ({time, bet, multiplier, profit, index, isNew})  {
             }
         , 100)
     }, []);
-    console.warn(marginTop)
+    const profitColor = profit > 0 ? '#73FC7F' : '#FD7979';
     return (
-        <div   style={{maxHeight: marginTop}} key={`bet-item-${index}`} className={`bets-row bets-data-row ${visible ? 'visible' : ''}`}>
+        <div style={{maxHeight: marginTop}} key={`bet-item-${index}`} className={`bets-row bets-data-row ${visible ? 'visible' : ''}`}>
             <span>{time}</span>
             <span className='bet-amount-value'>
                     <span className='bet-amount-btc-icon'>₿</span>
@@ -60,7 +50,7 @@ function RenderBetItem ({time, bet, multiplier, profit, index, isNew})  {
             <span>x{multiplier}</span>
             <span className='bet-amount-value green'>
                     <span className='bet-amount-btc-icon'>₿</span>
-                    {profit}
+                    <span style={{color: profitColor}}>{profit}</span>
             </span>
         </div>
     )
@@ -110,7 +100,6 @@ function List() {
             </div>
             <div className='bets-items'>
                 {items.map((item, index) => {
-                    console.warn('index map', index)
                     return <RenderBetItem {...item} key={item.id} isNew={index === 0}/>})}
             </div>
         </div>

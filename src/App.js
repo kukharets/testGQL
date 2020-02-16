@@ -4,6 +4,8 @@ import './App.css';
 import Counter from './assests/Counter.svg';
 import BetAmount from "./BetAmount";
 import List from "./List";
+import Claws from "./Claws";
+import Modal from "./Modal";
 
 function App() {
     const [counterBottom, setCounterBottom] = useState(null);
@@ -11,6 +13,8 @@ function App() {
     const [maxBottom, setMaxBottom] = useState(null);
     const [counterPushed, setCounterPushed] = useState(null);
     const [startMouseY, setStartMouseY] = useState(null);
+    const [modalOpenState, setModalOpenState] = useState(false);
+
 
     const svgRef = useRef();
     const sliderRef = useRef();
@@ -32,6 +36,11 @@ function App() {
         setCounterPushed(true);
         setStartMouseY(e.clientY);
     };
+
+    const handleModalOpenState = () => {
+        setModalOpenState(!modalOpenState);
+    };
+
     const handleMouseUp = (e) => {
         setCounterPushed(false);
         let newBottom = counterBottom + (startMouseY - e.clientY);
@@ -59,12 +68,15 @@ function App() {
 
     return (
     <div className="app">
+      {modalOpenState &&
+        <Modal handleModalOpenState={handleModalOpenState}/>
+      }
       <header className="header">
           <span className="header-menu-icon"/>
       </header>
       <div  className="content">
         <div  className='slider-container'>
-          <div   onMouseUp={handleMouseUp} onMouseMove={handleMouseMove} className='slider-wrapper'>
+          <div onMouseUp={handleMouseUp} onMouseMove={handleMouseMove} className='slider-wrapper'>
               <div className='slider-values'>
                 <span className='slider-value'>100</span>
                 <span className='slider-value'>0</span>
@@ -83,7 +95,7 @@ function App() {
           <List/>
         </div>
         <div className='shellfish-container'>
-
+            <Claws handleModalOpenState={handleModalOpenState}/>
         </div>
       </div>
     </div>
