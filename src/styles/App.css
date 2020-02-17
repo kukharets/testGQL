@@ -114,7 +114,7 @@
   position: absolute;
   z-index: 999;
   height: 68.8px;
-  background-image: url("./assests/Counter.svg");
+  background-image: url("../assests/Counter.svg");
   display: flex;
   color: #FFFFFF;
   justify-content: flex-end;
@@ -311,15 +311,16 @@ input[type=number] {
   justify-content: center;
 }
 .claws-wrapper {
+  position: relative;
   cursor: pointer;
   display: flex;
   justify-content: center;
 }
 .claws-wrapper>img:first-child{
-  width: 14vw;
+  width: 60%;
 }
 .claws-wrapper>img:last-child{
-  width: 20vw;
+  width: 80%;
 }
 .claws-upper-wrapper {
   height: 150px;
@@ -328,11 +329,11 @@ input[type=number] {
 
 .claws-upper {
   position: absolute;
-  margin-top: 6vw;
+  margin-top: 25%;
   z-index: 999;
 }
 .claws-upper.hovered {
-  margin-top: 4.5vw;
+  margin-top: 15%;
   -webkit-transition: margin-top 1s;
 }
 

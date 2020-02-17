@@ -1,6 +1,6 @@
 import React, {  useState } from 'react';
-import ClawsBottom from './assests/ClawsBottom.svg';
-import ClawsUpper from './assests/ClawsUpper.svg';
+import ClawsBottom from '../assests/ClawsBottom.svg';
+import ClawsUpper from '../assests/ClawsUpper.svg';
 
 function Claws({handleModalOpenState}) {
     const [hovered, setHovered] = useState(false);

@@ -1,5 +1,5 @@
 import React from 'react';
-import Confirm from './assests/Confirm.svg';
+import Confirm from '../assests/Confirm.svg';
 
 function Modal({handleModalOpenState}) {
     return (

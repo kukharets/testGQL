@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import './App.css';
-import './Mobile.css';
-import BetAmount from "./BetAmount";
-import List from "./List";
-import Claws from "./Claws";
-import Modal from "./Modal";
-import Slider from "./Slider";
+import './styles/App.css';
+import './styles/Mobile.css';
+import BetAmount from "./components/BetAmount";
+import List from "./components/List";
+import Claws from "./components/Claws";
+import Modal from "./components/Modal";
+import Slider from "./components/Slider";
 
 
 
