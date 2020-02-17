@@ -1,7 +1,7 @@
 @media (min-width: 1px) and (max-width: 768px) {
   .content {
     display: grid;
-    grid-template-rows: 80vh 560px 560px;
+    grid-template-rows: 80vmax 560px 560px;
     grid-template-columns: unset;
     grid-row-gap: 50px;
     padding: 100px 20px;
@@ -54,5 +54,25 @@
   }
   .claws-wrapper>img:last-child{
     width: 40vw;
+  }
+}
+
+@media (min-width: 768px) and (max-height: 600px) {
+  .datalist-container {
+      padding-top: 10px;
+  }
+  .content {
+    grid-auto-rows: 86vh;
+    padding-top: 60px;
+  }
+  .bets-list {
+    height: 95%;
+  }
+  .bets-items {
+    padding-top: 5%;
+    padding-bottom: 0;
+  }
+  .bets-row.bets-header {
+    z-index: 999;
   }
 }
