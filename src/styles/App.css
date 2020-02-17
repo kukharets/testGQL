@@ -119,6 +119,9 @@
   color: #FFFFFF;
   justify-content: flex-end;
   align-items: center;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .bet-amount-btc-input {
@@ -253,6 +256,7 @@ input[type=number] {
 }
 
 .bets-header {
+  word-break: break-word;
   background-color: #275789;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
@@ -262,12 +266,12 @@ input[type=number] {
 }
 
 .bets-row {
-  height: 34px;
+  min-height: 34px;
   align-items: center;
   padding-left: 5%;
   padding-right: 0.5vw;
   display: grid;
-  grid-template-columns: 20% 20% 20% 20%;
+  grid-template-columns: 6fr 4fr 4fr 4fr;
   grid-column-gap: 1vw;
 }
 

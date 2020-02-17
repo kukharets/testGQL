@@ -1,7 +1,7 @@
 @media (min-width: 1px) and (max-width: 768px) {
   .content {
     display: grid;
-    grid-template-rows: 80vmax 560px 560px;
+    grid-template-rows: 80vmax auto 80vmax;
     grid-template-columns: unset;
     grid-row-gap: 50px;
     padding: 100px 20px;
@@ -11,6 +11,9 @@
   }
   .slider-wrapper {
     width: unset;
+  }
+  .counter-value {
+    font-size: 26px;
   }
   .bet-amount-container {
     grid-template-columns: 165fr 58fr 58fr
@@ -32,6 +35,10 @@
   }
   .bets-list {
     height: 80%;
+  }
+  .bets-items {
+    padding-top: 5%;
+    margin-bottom: 10%;
   }
   .modal {
     position: fixed;
@@ -55,6 +62,19 @@
   .claws-wrapper>img:last-child{
     width: 40vw;
   }
+  .slider {
+    width: 70px;
+  }
+  .image-wrapper {
+    height: 10vmax;
+    width: 15vmax;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+  .bets-row {
+    grid-template-columns: 20% 25% 15% 20%;
+  }
 }
 
 @media (min-width: 768px) and (max-height: 600px) {
@@ -71,8 +91,32 @@
   .bets-items {
     padding-top: 5%;
     padding-bottom: 0;
+    font-size: 10px;
+    grid-row-gap: 5px;
+  }
+  .bets-data-row {
+    margin-bottom: 4px;
   }
   .bets-row.bets-header {
     z-index: 999;
+  }
+  .bets-header {
+    font-size: 10px;
+  }
+  .image-wrapper {
+    height: 10vmin;
+    width: 15vmin;
+  }
+  .counter-value {
+    font-size: 16px;
+  }
+  .slider {
+    width: 70px;
+  }
+  .slider-value {
+    font-size: 30px;
+  }
+  .slider-wrapper {
+    width: 160px;
   }
 }
