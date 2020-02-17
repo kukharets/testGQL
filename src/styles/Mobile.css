@@ -1,7 +1,7 @@
 @media (min-width: 1px) and (max-width: 768px) {
   .content {
     display: grid;
-    grid-template-rows: 80vmax auto 80vmax;
+    grid-template-rows: 80vmax 650px 80vmax;
     grid-template-columns: unset;
     grid-row-gap: 50px;
     padding: 100px 20px;
