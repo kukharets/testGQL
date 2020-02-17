@@ -1,13 +1,16 @@
-@media (min-width: 1px) and (max-width: 479px) {
+@media (min-width: 1px) and (max-width: 768px) {
   .content {
     display: grid;
-    grid-template-rows: 560px 560px 560px;
+    grid-template-rows: 80vh 560px 560px;
     grid-template-columns: unset;
     grid-row-gap: 50px;
     padding: 100px 20px;
   }
   .slider {
     touch-action: none;
+  }
+  .slider-wrapper {
+    width: unset;
   }
   .bet-amount-container {
     grid-template-columns: 165fr 58fr 58fr
@@ -45,5 +48,11 @@
   }
   .modal-header>img{
     display: none;
+  }
+  .claws-wrapper>img:first-child{
+    width: 34vw;
+  }
+  .claws-wrapper>img:last-child{
+    width: 40vw;
   }
 }

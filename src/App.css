@@ -26,9 +26,9 @@
 .content {
   display: grid;
   grid-template-columns: 28.5fr 43fr 28.5fr;
-  grid-column-gap: 50px;
+  grid-column-gap: 5vw;
   grid-auto-rows: 76vh;
-  padding: 13vh 68px 0 97px;
+  padding: 13vh 5vw 0 5vw;
 }
 
 .content-inner {
@@ -53,7 +53,7 @@
 
 .slider-wrapper {
   position: relative;
-  width: 259px;
+  width: 20vw;
   height: 71%;
   display: flex;
   flex-direction: row;
@@ -119,6 +119,10 @@
   color: #FFFFFF;
   justify-content: flex-end;
   align-items: center;
+}
+
+.bet-amount-btc-input {
+  width: 60%;
 }
 
 .counter-value {
@@ -193,6 +197,7 @@
   color: white;
   font-weight: 600;
   display: flex;
+  align-items: center;
 }
 
 .bet-amount-btc-input {
@@ -218,6 +223,8 @@ input[type=number] {
 }
 
 .bet-amount-btc-icon {
+  min-width: 15.7px;
+  min-height: 15.7px;
   width: 15.7px;
   height: 15.7px;
   border-radius: 100%;
@@ -242,7 +249,7 @@ input[type=number] {
 }
 .bets-list {
   width: 90%;
-  height: 70%;
+  height: 80%;
 }
 
 .bets-header {
@@ -257,11 +264,11 @@ input[type=number] {
 .bets-row {
   height: 34px;
   align-items: center;
-  padding-left: 50px;
-  padding-right: 20px;
+  padding-left: 5%;
+  padding-right: 0.5vw;
   display: grid;
-  grid-template-columns: 6fr 4fr 4fr 4fr;
-  grid-column-gap: 30px;
+  grid-template-columns: 20% 20% 20% 20%;
+  grid-column-gap: 1vw;
 }
 
 .bets-row>span {
@@ -305,18 +312,27 @@ input[type=number] {
 }
 .claws-wrapper {
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+}
+.claws-wrapper>img:first-child{
+  width: 14vw;
+}
+.claws-wrapper>img:last-child{
+  width: 20vw;
 }
 .claws-upper-wrapper {
-  height: 200px;
-  margin-bottom: -200px;
+  height: 150px;
+  margin-bottom: -150px;
 }
 
 .claws-upper {
-  margin-top: 50px;
+  position: absolute;
+  margin-top: 6vw;
   z-index: 999;
 }
 .claws-upper.hovered {
-  margin-top: -10px;
+  margin-top: 4.5vw;
   -webkit-transition: margin-top 1s;
 }
 

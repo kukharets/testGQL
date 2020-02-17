@@ -16,10 +16,8 @@ function Claws({handleModalOpenState}) {
 
     return (
         <div onClick={handleModalOpenState} onTouchStart={toggleHovered} onTouchEnd={handleModalOpen} className={`claws-wrapper`} onMouseEnter={toggleHovered} onMouseLeave={toggleHovered}>
-            <div className={`claws-upper-wrapper`} >
-                <img className={`claws-upper ${hovered ? 'hovered' : ''}`} src={ClawsUpper} alt=""/>
-            </div>
-            <img src={ClawsBottom} alt=""/>
+          <img className={`claws-upper ${hovered ? 'hovered' : ''}`} src={ClawsUpper} alt=""/>
+          <img src={ClawsBottom} alt=""/>
         </div>
     )
 }
