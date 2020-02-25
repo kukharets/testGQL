@@ -8,7 +8,7 @@ import {SubscriptionClient} from 'subscriptions-transport-ws';
 import ApolloClient from 'apollo-client';
 
 
-const WSClient = new SubscriptionClient(`wss://gambilife.com/graphql`, {
+const WSClient = new SubscriptionClient(`ws://gambilife.com/graphql`, {
     reconnect: true,
 });
 
